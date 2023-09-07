@@ -76,7 +76,7 @@ android {
     namespace "com.auth0samples"
     defaultConfig {
         applicationId "com.auth0samples"
-        manifestPlaceholders = [auth0Domain: "ewanharris.eu.auth0.com", auth0Scheme: "${applicationId}.auth0"]
+        manifestPlaceholders = [auth0Domain: "YOUR_AUTH0_DOMAIN", auth0Scheme: "${applicationId}.auth0"]
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

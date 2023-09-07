@@ -2,6 +2,8 @@
 
 The complete guide to getting started with [react-native-auth0](https://github.com/auth0/react-native-auth0) is our [React Native QuickStart](https://auth0.com/docs/quickstart/native/react-native/00-login).
 
+This sample also integrates with [React Navigation](https://reactnavigation.org/).
+
 ## 1. Install
 
 Clone the repository and install the dependencies with [Yarn](https://yarnpkg.com):

@@ -1,8 +1,12 @@
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 import {useAuth0} from 'react-native-auth0';
+import {StackParamList} from './App';
 
-export function Home() {
+export function Home({
+  navigation,
+}: NativeStackScreenProps<StackParamList, 'Home'>) {
   const {authorize, clearSession, user, isLoading} = useAuth0();
 
   const onLogin = async () => {
@@ -38,6 +42,12 @@ export function Home() {
         onPress={loggedIn ? onLogout : onLogin}
         title={loggedIn ? 'Log Out' : 'Log In'}
       />
+      {loggedIn ? (
+        <Button
+          onPress={() => navigation.navigate('Profile')}
+          title="View Profile"
+        />
+      ) : undefined}
     </View>
   );
 }
